@@ -1,0 +1,44 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Men Gym Standard Breathable Jacket",
+            "cover": "https://images.asos-media.com/products/adidas-originals-adventure-chest-logo-hoodie-in-wonder-white/203402380-1-wonderwhite?$n_750w$&wid=750&fit=constrain",
+            "images": [""],
+            "price": "64.95",
+            "deliver": "",
+            "discount": "",
+            "categoeies": [""]
+        },
+        {
+            "id": 2,
+            "name": "Nike Windrunner",
+            "cover": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/663f92a1-0ec0-4dfa-8b4e-4a325e0e6aa8/windrunner-running-jacket-gc3l22.png",
+            "images": [],
+            "price": "45.80",
+            "deliver": "",
+            "discount": "",
+            "categoeies": []
+        },
+        {
+            "id": 3,
+            "name": "Nike Sportswear Tech Fleece",
+            "cover": "https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/bb918580-e0c6-4928-a4a1-238fe4a2e040/sportswear-tech-fleece-joggers-c9Fj2s.png",
+            "images": [],
+            "price": "80.95",
+            "deliver": "",
+            "discount": "",
+            "categoeies": []
+        },
+        {
+            "id": 4,
+            "name": "Nike Sportswear Club Fleece",
+            "cover": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/mgf8tsvlrcgym3rvcdru/sportswear-club-fleece-crew-2q3nj7.png",
+            "images": [],
+            "price": "54.95",
+            "deliver": "",
+            "discount": "",
+            "categoeies": []
+        }
+    ]
+}
