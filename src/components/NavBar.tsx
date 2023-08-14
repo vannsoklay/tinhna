@@ -1,9 +1,5 @@
 import { Link } from "react-router-dom";
-import {
-  RiShoppingBasketLine,
-  RiHeart3Line,
-  RiLock2Line,
-} from "react-icons/ri";
+import { RiShoppingBasketLine, RiMoonLine } from "react-icons/ri";
 import Popup from "./Dialog";
 import { useState } from "react";
 import LoginForm from "./forms/LoginForm";
@@ -22,24 +18,56 @@ export default function NavBar() {
           />
         </div>
       </ul>
-      <ul className="flex justify-end space-x-4 items-center">
+      <ul className="flex justify-end space-x-2 items-center">
         <li>
-          <div className="h-12 w-12 border cursor-pointer rounded-full relative">
+          <button
+            id="theme-toggle"
+            data-tooltip-target="tooltip-toggle"
+            type="button"
+            className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+          >
+            <svg
+              id="theme-toggle-dark-icon"
+              className="hidden w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+            </svg>
+            <RiMoonLine className="text-2xl text-gray-600" />
+          </button>
+          <div
+            id="tooltip-toggle"
+            role="tooltip"
+            className="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip"
+          >
+            Toggle dark mode
+            <div className="tooltip-arrow" data-popper-arrow></div>
+          </div>
+          {/* <div className="h-12 w-12 border cursor-pointer rounded-full relative">
             <label className="flex justify-center items-center h-full">
               <RiHeart3Line className="text-xl text-gray-600" />
             </label>
-          </div>
+          </div> */}
         </li>
         <li>
           <Link to="/checkout">
-            <div className="h-12 w-12 cursor-pointer rounded-full border relative">
+            <button
+              type="button"
+              data-dropdown-toggle="notification-dropdown"
+              className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
+            >
+              <RiShoppingBasketLine className="text-2xl text-gray-600" />
+            </button>
+            {/* <div className="h-12 w-12 cursor-pointer rounded-full border relative">
               <label className="flex justify-center items-center h-full cursor-pointer">
                 <RiShoppingBasketLine className="text-xl text-gray-600" />
               </label>
               <span className="absolute -top-1 -right-4 text-sm h-5 w-8 rounded-full bg-red-500 flex justify-center items-center text-white">
                 5
               </span>
-            </div>
+            </div> */}
           </Link>
         </li>
         {auth ? <NavbarPrivate /> : <NavbarPublic setHide={setHide} />}
@@ -79,12 +107,19 @@ function NavbarPrivate() {
 function NavbarPublic({ setHide }: any) {
   return (
     <>
-      <li className="font-semibold text-md" onClick={() => setHide(true)}>
-        <div className="h-12 w-12 border cursor-pointer rounded-full relative">
+      <li onClick={() => setHide(true)}>
+        <button
+          type="button"
+          data-dropdown-toggle="notification-dropdown"
+          className="text-gray-500 dark:text-gray-400 focus:outline-none rounded-lg text-sm p-2.5"
+        >
+          <span className="text-md font-bold text-gray-600">Login</span>
+        </button>
+        {/* <div className="h-12 w-12 border cursor-pointer rounded-full relative">
           <label className="flex justify-center items-center h-full">
             <RiLock2Line className="text-xl text-gray-600" />
           </label>
-        </div>
+        </div> */}
       </li>
     </>
   );

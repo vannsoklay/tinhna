@@ -1,40 +1,38 @@
-import { RiHomeLine, RiArrowRightSLine } from "react-icons/ri";
-import { Link } from "react-router-dom";
+import { RiShoppingBasketFill, RiArrowRightSLine } from "react-icons/ri";
+import { Home } from "./Icons";
 
 export const Breadcrumb: React.FC<{}> = () => {
   return (
-    <nav className="w-full rounded-md">
-      <ol className="list-reset flex space-x-1">
-        <li>
-          <Link
-            to={`/`}
-            className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
-          >
-            <label className="flex space-x-2">
-              <RiHomeLine className="h-5 w-5 text-gray-600" />
-              <span className="font-medium text-gray-800">Main Page</span>
-            </label>
-          </Link>
-        </li>
-        <li>
-          <label>
-            <RiArrowRightSLine className="h-6 w-6 text-gray-600" />
-          </label>
-        </li>
-        <li>
+    <nav className="flex" aria-label="Breadcrumb">
+      <ol className="inline-flex items-center space-x-1 md:space-x-3">
+        <li className="inline-flex items-center">
           <a
             href="#"
-            className="text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600"
+            className="group inline-flex items-center text-md font-bold text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white"
           >
-            <span className="font-medium text-gray-800">Category</span>
+            <RiShoppingBasketFill className="text-2xl text-gray-600 mr-2.5 group-hover:text-blue-600" />
+            Home
           </a>
         </li>
         <li>
-          <label>
-            <RiArrowRightSLine className="h-6 w-6 text-gray-600" />
-          </label>
+          <div className="flex items-center">
+            <RiArrowRightSLine className="text-2xl text-gray-600 mx-1"/>
+            <a
+              href="#"
+              className="ml-2.5 text-md font-medium text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white"
+            >
+              Projects
+            </a>
+          </div>
         </li>
-        <li className="text-neutral-500 dark:text-neutral-400">Data</li>
+        <li aria-current="page">
+          <div className="flex items-center">
+            <RiArrowRightSLine className="text-2xl text-gray-600 mx-1"/>
+            <span className="ml-2.5 text-md font-medium text-gray-500 md:ml-2 dark:text-gray-400">
+              Flowbite
+            </span>
+          </div>
+        </li>
       </ol>
     </nav>
   );

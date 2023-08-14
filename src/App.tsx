@@ -1,5 +1,6 @@
 import Container from "./components/Container";
 import { createBrowserRouter, json, RouterProvider } from "react-router-dom";
+import 'flowbite';
 
 // === ** pages ** ===
 import { Home, SlugProduct, Checkout } from "./pages";
