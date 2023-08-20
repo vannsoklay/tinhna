@@ -8,17 +8,23 @@ export default function NavBar() {
   const auth = false;
   const [hide, setHide] = useState(false);
   return (
-    <nav className="flex h-20 justify-between items-center">
-      <ul className="w-full">
+    <nav className="fixed z-30 flex h-20 w-full bg-gray-50 justify-between items-center bg-white">
+      <ul className="w-full flex items-center space-x-4">
+        <div className="lg:w-80 w-28 h-20 bg-white flex items-center justify-center border-r border-gray-200">
+          <img
+            className="h-16 jsutify-center text-center"
+            src="https://1000logos.net/wp-content/uploads/2020/06/Lays-Logo.png"
+          />
+        </div>
         <div>
           <input
             type="text"
-            className="lg:w-96 sm:w-64 w-58 h-12 outline-none pl-3 border"
+            className="lg:w-96 sm:w-64 w-58 h-12 outline-none pl-3 border border-slate-400 focus:outline-none focus:ring-gray-400 focus:border-gray-400"
             placeholder="Search"
           />
         </div>
       </ul>
-      <ul className="flex justify-end space-x-2 items-center">
+      <ul className="flex justify-end space-x-2 items-center mr-4">
         <li>
           <button
             id="theme-toggle"
@@ -55,7 +61,7 @@ export default function NavBar() {
           <Link to="/checkout">
             <button
               type="button"
-              data-dropdown-toggle="notification-dropdown"
+              // data-dropdown-toggle="notification-dropdown"
               className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
             >
               <RiShoppingBasketLine className="text-2xl text-gray-600" />
@@ -110,16 +116,10 @@ function NavbarPublic({ setHide }: any) {
       <li onClick={() => setHide(true)}>
         <button
           type="button"
-          data-dropdown-toggle="notification-dropdown"
           className="text-gray-500 dark:text-gray-400 focus:outline-none rounded-lg text-sm p-2.5"
         >
           <span className="text-md font-bold text-gray-600">Login</span>
         </button>
-        {/* <div className="h-12 w-12 border cursor-pointer rounded-full relative">
-          <label className="flex justify-center items-center h-full">
-            <RiLock2Line className="text-xl text-gray-600" />
-          </label>
-        </div> */}
       </li>
     </>
   );

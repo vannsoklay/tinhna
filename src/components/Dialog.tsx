@@ -18,7 +18,7 @@ const Popup: React.FC<DialogType> = ({
 }) => {
   return (
     <Transition appear show={hide} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={() => onCancel()}>
+      <Dialog as="div" className="relative z-40" onClose={() => onCancel()}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"

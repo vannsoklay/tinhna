@@ -1,4 +1,4 @@
-import Container from "./components/Container";
+import Layout from "./components/Layout";
 import { createBrowserRouter, json, RouterProvider } from "react-router-dom";
 import 'flowbite';
 
@@ -22,7 +22,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Container />,
+      element: <Layout />,
       errorElement: <ErrorPage />,
       children: [
         {
