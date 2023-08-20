@@ -1,7 +1,11 @@
+
 type Product = {
-    id: number,
-    name: string,
-    cover: string,
-    images: string,
-    price: string,
-}
+  id: number;
+  name: string;
+  cover: string;
+  images: string[];
+  price: string;
+  deliver: string;
+  discount: string;
+  categoeies: string[] | null;
+};
