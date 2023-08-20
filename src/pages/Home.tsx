@@ -1,8 +1,11 @@
 import { Breadcrumb } from "../components/Breadcrumb";
 import products from "../api/products.json";
 import { Link } from "react-router-dom";
+import { useShop } from "../contexts/useShop";
 
 export default function Home() {
+  const { cart } = useShop();
+
   return (
     <div className="w-full">
       <Breadcrumb />

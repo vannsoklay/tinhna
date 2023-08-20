@@ -5,7 +5,7 @@ type Props = {
 };
 
 const useAuth: React.FC<Props> = ({ children }) => {
-  return <>{children}</>;
+  return <div>{children}</div>;
 };
 
 export default useAuth;
