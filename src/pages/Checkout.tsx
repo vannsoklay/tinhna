@@ -1,15 +1,15 @@
 import { useShop } from "../contexts/useShop";
 
 export default function Checkout() {
-  const { cart, addCart, removeCart } = useShop();
+  const { carts, addCart, removeCart } = useShop();
 
   return (
     <div className="flex justify-center">
       <main>
-        {cart.length == 0 ? (
+        {carts.length == 0 ? (
           <div>Not Product</div>
         ) : (
-          cart.map((product) => (
+          carts.map((product) => (
             <div className="px-4 py-4">
               <div>
                 {product.name}

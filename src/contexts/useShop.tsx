@@ -5,7 +5,7 @@ type Props = {
 };
 
 type ShopType = {
-  cart: Cart[];
+  carts: Cart[];
   addCart: Function;
   removeCart: Function;
 };
@@ -44,7 +44,7 @@ const ShopProvider: React.FC<Props> = ({ children }) => {
   };
 
   return (
-    <ShopContext.Provider value={{ cart: isCart, addCart, removeCart }}>
+    <ShopContext.Provider value={{ carts: isCart, addCart, removeCart }}>
       {children}
     </ShopContext.Provider>
   );

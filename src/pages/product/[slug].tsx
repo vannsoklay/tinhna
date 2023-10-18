@@ -5,8 +5,10 @@ import { useLoaderData, useParams } from "react-router-dom";
 export default function ProductDetail() {
   const param = useParams();
   const product = useLoaderData() as Product;
-  const { cart, addCart } = useShop();
+  const { carts, addCart } = useShop();
 
+  console.log("product", carts);
+  
   return (
     <div>
       <header className="mb-6">
