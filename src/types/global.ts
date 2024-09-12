@@ -1,3 +1,3 @@
-type Params = {
+export type Params = {
     id: number
 }
