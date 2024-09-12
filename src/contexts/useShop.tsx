@@ -1,5 +1,4 @@
 import React, { useContext, createContext, useState } from "react";
-import { Product } from "types/product";
 import { Cart, ShopType } from "types/shop";
 
 type Props = {

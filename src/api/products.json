@@ -8,7 +8,7 @@
             "price": "64.95",
             "deliver": "",
             "discount": "",
-            "categoeies": []
+            "categories": []
         },
         {
             "id": 2,
@@ -18,7 +18,7 @@
             "price": "45.80",
             "deliver": "",
             "discount": "",
-            "categoeies": []
+            "categories": []
         },
         {
             "id": 3,
@@ -28,7 +28,7 @@
             "price": "80.95",
             "deliver": "",
             "discount": "",
-            "categoeies": []
+            "categories": []
         },
         {
             "id": 4,
@@ -38,7 +38,7 @@
             "price": "54.95",
             "deliver": "",
             "discount": "",
-            "categoeies": []
+            "categories": []
         }
     ]
 }

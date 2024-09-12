@@ -1,10 +1,17 @@
-import { json } from "react-router-dom";
+// import { json } from "react-router-dom";
 import products from "../api/products.json";
 
-export async function LoaderSlugProduct({ params }: any) {
-  let product = products.products.find((p) => p.id == params.id);
+import { json } from "@remix-run/router"; // or 'react-router-dom' depending on your setup
+
+export async function LoaderSlugProduct({ params }: { params: Params }) {
+  // Assuming `products` is properly imported or available in scope
+  const product = products.products.find((p) => p.id === params.id);
+
+  // If the product is not found, return a 404 status
   if (!product) {
-    throw json({ message: "Not Found" }, { status: 400 });
+    throw json({ message: "Product Not Found" }, { status: 404 });
   }
+
+  // Return the found product as a JSON response
   return json(product);
 }

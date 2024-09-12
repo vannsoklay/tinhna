@@ -1,4 +1,3 @@
-import { Product } from "types/product";
 import { UseShop } from "../contexts/useShop";
 
 export default function Checkout() {
