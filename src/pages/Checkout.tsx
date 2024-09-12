@@ -1,7 +1,8 @@
-import { useShop } from "../contexts/useShop";
+import { Product } from "types/product";
+import { UseShop } from "../contexts/useShop";
 
 export default function Checkout() {
-  const { carts, addCart, removeCart } = useShop();
+  const { carts, addItem, removeItem } = UseShop();
 
   return (
     <div className="flex justify-center">
@@ -21,8 +22,8 @@ export default function Checkout() {
                 </span>
               </div>
               <div>
-                <button onClick={() => removeCart(product.id)}>Remove</button>
-                <button onClick={() => addCart(product)}>Add</button>
+                <button onClick={() => removeItem(product.id)}>Remove</button>
+                <button onClick={() => addItem(product as any)}>Add</button>
               </div>
             </div>
           ))

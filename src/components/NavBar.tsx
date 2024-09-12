@@ -3,10 +3,10 @@ import Popup from "./Dialog";
 import { useState } from "react";
 import LoginForm from "./forms/LoginForm";
 import { AddToCart } from "./Cart";
-import { useShop } from "../contexts/useShop";
+import { UseShop } from "../contexts/useShop";
 
 export default function NavBar() {
-  const { carts } = useShop();
+  const { carts } = UseShop();
   const auth = false;
   const [hide, setHide] = useState(false);
   return (

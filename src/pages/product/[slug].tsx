@@ -1,14 +1,21 @@
-import { useShop } from "../../contexts/useShop";
+import { UseShop } from "../../contexts/useShop";
 import { Breadcrumb } from "../../components/Breadcrumb";
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
+import { Product } from "types/product";
+import { Cart } from "types/shop";
 
 export default function ProductDetail() {
-  const param = useParams();
   const product = useLoaderData() as Product;
-  const { carts, addCart } = useShop();
+  const { addItem } = UseShop();
 
-  console.log("product", carts);
-  
+  const item: Cart = {
+    id: product.id,
+    name: product.name,
+    images: product.images,
+    price: product.price,
+    count: 1,
+  };
+
   return (
     <div>
       <header className="mb-6">
@@ -29,7 +36,7 @@ export default function ProductDetail() {
             <button
               className="px-4 py-1 bg-blue-700 text-cyan-50"
               onClick={() => {
-                addCart(product);
+                addItem(item);
               }}
             >
               Add to bag
